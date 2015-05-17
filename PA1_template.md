@@ -8,10 +8,11 @@ output:
 
 ## Loading and preprocessing the data
 
-We read the data and convert the date strings to Date objects.
+We unzip the zip file (provided in the master branch), read the data and convert the date strings to Date objects.
 
 
 ```r
+unzip("activity.zip")
 activity_data <- read.csv("activity.csv", stringsAsFactors=FALSE)
 activity_data$date <- as.Date(activity_data$date)
 ```
